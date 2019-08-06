@@ -1,3 +1,92 @@
+ /* STRINGS */
+ let myString = "hello,this,is,a,difficult,to,read,sentence";
+//Add the string to your file and log it.
+console.log(myString);
+
+//Log the length of myString.
+console.log(myString.length);
+
+//The commas make that the sentence is quite hard to read. Find a way to remove the commas from the string and replace them with spaces.
+var newString = myString.replace(/,/g, ' ');
+console.log(newString);
+
+
+/*The string doesn't make any sense. Find a way to reverse this string so that it becomes readable.*/
+
+const str = 'dlroW olleH';
+
+function ReverseString(str) { 
+    return str.split('').reverse().join('') 
+ } 
+ console.log(ReverseString('dlroW olleH')) 
+
+  /* ARRAYS */
+
+  let favoriteAnimals = ["blowfish", "capricorn", "giraffe"];
+//Add a statement that adds your favorite animal say 'turtle' to the existing array.
+favoriteAnimals.push=('turtle'); // I think new array will include 4 object
+console.log(favoriteAnimals);
+
+//Now add another favorite animal to the array but make sure it is placed after 'blowfish' and before 'capricorn'.
+favoriteAnimals.splice(1, 0, 'meerkat');
+console.log(favoriteAnimals);
+
+//Delete 'giraffe' from the array.
+favoriteAnimals.splice(3, 1); 
+console.log(favoriteAnimals);
+
+ /* OPERATORS */
+
+ // 1. Mathematically, if a == b and b == c, then a == c. Can you explain in your words why this is not true for the above snippet?
+
+var a='0';
+var b= 0;
+var c=[];
+
+
+ console.log( a == b ? 'true':'false');
+ console.log( b == c ? 'true':'false');
+ console.log( a == c ? 'true':'false');
+
+ // a is string and c is array and there value are not equal.
+
+// 2.What do you think will happen with x == y, x === y and z === y and z == x? Try to think of answer first before running it on browser. Also, explain in your words why this happens?
+
+//where x and y also hold an address of the array, so we get false because the values and structure are different from the references they were originally created in the same image. arrays are reference rounds and generated once in memory
+
+const x = [1, 2, 3];
+const y = [1, 2, 3];
+const z = y;
+
+console.log( x == y ? 'true':'false');
+ console.log( x === y ? 'true':'false');
+ console.log( z === y ? 'true':'false');
+ console.log( z == x ? 'true':'false');
+
+// 3.
+
+const o1 = { foo: "bar" };
+const o2 = { foo: "bar" };
+const o3 = o2;
+
+// Show that changing o2 changes o3 (or not) and changing o1 changes o3(or not).
+o1.property = 'object';
+console.log(o1);
+console.log(o2);
+console.log(o3);
+// comment:  we change o1 then o3 is not changed.
+
+o2.property='this object';
+console.log(o1);
+console.log(o2);
+console.log(o3);
+//comment:we change o2 then o3 is changed
+
+// Does the order that you assign (o3 = o2 or o2 = o3) matter?
+// yes. because we cannot create it will say o3 is undefined.
+
+/* QUESTIONS FROM HYF REPOS */
+
 //8.1 First declare at least four variables and assign them different data types.
 var a=4;
 var b="fruit";
